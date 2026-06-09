@@ -1,0 +1,224 @@
+/* Глобальні константи дизайну */
+:root {
+  --primary: #FF5A00; /* Насичений помаранчевий замість Tailwind primary */
+  --tertiary: #1A1A1A;
+  --bg-surface-container: #f8f9fa;
+  --text-muted: #6c757d;
+  --emerald-400: #34d399;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  padding-top: 80px; /* Компнесація висоти фіксованого Navbar (h-20 = 80px) */
+  background-color: #ffffff;
+}
+
+
+.product-card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-card {
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.container-max {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-xs { font-size: 11px; }
+.font-black { font-weight: 900; }
+.font-bold { font-weight: 700; }
+.tracking-widest { tracking: 0.2em; letter-spacing: 0.15em; }
+.tracking-tighter { letter-spacing: -0.05em; }
+.text-primary { color: var(--primary) !important; }
+.text-tertiary { color: var(--primary) !important; }
+.text-emerald { color: var(--emerald-400) !important; }
+
+/* NAVBAR СТИЛІ */
+.navbar-custom {
+  height: 80px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.brand-logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-style: italic;
+  user-select: none;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #555;
+  padding-bottom: 4px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-btn:hover {
+  color: var(--primary);
+}
+
+.active-link {
+  color: var(--primary) !important;
+  font-weight: 800;
+  border-bottom: 2px solid var(--primary);
+}
+
+.currency-btn {
+  background-color: #eaeaea;
+  border: none;
+  transition: background-color 0.2s;
+}
+.currency-btn:hover {
+  background-color: #dfdfdf;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  transition: all 0.2s;
+}
+.icon-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.icon-btn:active {
+  transform: scale(0.95);
+}
+
+.cart-badge {
+  font-size: 9px;
+  font-weight: 900;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* HERO SECTION */
+.hero-section {
+  min-height: 600px;
+}
+
+.badge-performance {
+  background-color: rgba(255, 90, 0, 0.1);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.hero-title {
+  font-size: calc(1.8rem + 2vw);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.btn-orange {
+  background-color: var(--primary);
+  color: white;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  border: none;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.btn-orange:hover {
+  background-color: #e04f00;
+  color: white;
+}
+
+.ambient-glow {
+  width: 80%;
+  height: 80%;
+  background-color: rgba(255, 90, 0, 0.1);
+  filter: blur(60px);
+  z-index: 1;
+}
+
+.hero-shoe-img {
+  position: relative;
+  z-index: 2;
+  transform: rotate(-15px);
+  filter: drop-shadow(5px 25px 35px rgba(0,0,0,0.15));
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.hero-shoe-img:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+/* PRODUCT CARD */
+.title-line {
+  height: 6px;
+  width: 96px;
+  border-radius: 3px;
+}
+
+.btn-all-products:hover i {
+  transform: translateX(4px);
+}
+.btn-all-products i {
+  transition: transform 0.2s;
+}
+
+.product-card {
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* FEATURES STANDARDS */
+.icon-circle {
+  width: 64px;
+  height: 64px;
+  transition: all 0.3s;
+}
+.feature-group:hover .icon-circle {
+  background-color: var(--primary) !important;
+  color: white !important;
+}
+
+/* FOOTER СТИЛІ */
+.social-btn {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255,255,255,0.05);
+  color: #aaa;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.social-btn:hover {
+  background-color: var(--primary);
+  color: white;
+  transform: scale(1.1);
+}
+
+.footer-links button:hover {
+  color: white !important;
+  padding-left: 4px;
+}
+.footer-links button {
+  transition: all 0.2s;
+}
+
+.footer-bottom-links button:hover {
+  color: var(--primary) !important;
+}

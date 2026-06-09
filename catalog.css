@@ -1,0 +1,92 @@
+:root {
+  --primary: #FF5A00;
+  --bg-light: #f8f9fa;
+  --dark: #1a1a1a;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  padding-top: 90px;
+  background-color: #ffffff;
+}
+
+.container-max {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Шрифтові класи */
+.font-black { font-weight: 900; }
+.font-bold { font-weight: 700; }
+.text-primary { color: var(--primary) !important; }
+.text-xs { font-size: 11px; }
+.tracking-tight { letter-spacing: -0.02em; }
+.tracking-wider { letter-spacing: 0.1em; }
+
+/* NAVBAR */
+.navbar-custom {
+  height: 80px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.85) !important;
+}
+.brand-logo { font-size: 1.5rem; font-weight: 900; font-style: italic; }
+.nav-link-btn {
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #555;
+  letter-spacing: 0.1em;
+}
+.active-link {
+  color: var(--primary) !important;
+  border-bottom: 2px solid var(--primary);
+}
+.currency-btn {
+  background-color: #eee;
+  border: none;
+  font-size: 12px;
+  font-weight: 700;
+}
+.icon-btn { background: none; border: none; }
+.cart-badge { font-size: 9px; width: 18px; height: 18px; }
+
+/* КАРТКИ ТОВАРІВ */
+.catalog-product-card {
+  border-color: rgba(0, 0, 0, 0.06) !important;
+  background-color: #ffffff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.catalog-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 .75rem 1.5rem rgba(0,0,0,.08) !important;
+}
+.catalog-product-card .img-box img {
+  transition: transform 0.4s ease;
+}
+.catalog-product-card:hover .img-box img {
+  transform: scale(1.04) rotate(-2deg);
+}
+
+/* КНОПКА КУПИТИ */
+.btn-orange-sm {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.btn-orange-sm:hover {
+  background-color: #e04f00;
+  transform: scale(1.05);
+}
+.btn-orange-sm:active {
+  transform: scale(0.95);
+}
+
+.mix-blend-multiply { mix-blend-mode: multiply; }
+.shadow-xs { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+.border-dashed { border-style: dashed !important; border-width: 2px !important; }

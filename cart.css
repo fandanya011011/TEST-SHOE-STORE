@@ -1,0 +1,97 @@
+:root {
+  --primary: #FF5A00;
+  --dark-surface: #1a1a1a;
+  --bg-light: #f8f9fa;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  padding-top: 90px;
+  background-color: #ffffff;
+}
+
+.container-max {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Шрифтові токени */
+.font-black { font-weight: 900; }
+.font-bold { font-weight: 700; }
+.text-primary { color: var(--primary) !important; }
+.text-xs { font-size: 11px; }
+.tracking-tight { letter-spacing: -0.03em; }
+.tracking-wider { letter-spacing: 0.1em; }
+.tracking-widest { letter-spacing: 0.15em; }
+
+/* NAVBAR */
+.navbar-custom {
+  height: 80px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.85) !important;
+}
+.brand-logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-style: italic;
+}
+.nav-link-btn {
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #555;
+  letter-spacing: 0.1em;
+}
+.active-link {
+  color: var(--primary) !important;
+  border-bottom: 2px solid var(--primary);
+}
+.currency-btn {
+  background-color: #eee;
+  border: none;
+  font-size: 12px;
+  font-weight: 700;
+}
+.icon-btn { background: none; border: none; }
+.cart-badge { font-size: 9px; width: 18px; height: 18px; }
+
+/* КАРТКА ТОВАРУ КОШИКА */
+.product-cart-item {
+  border-color: rgba(0,0,0,0.07) !important;
+}
+.mix-blend-multiply {
+  mix-blend-mode: multiply;
+}
+.transition-300 {
+  transition: all 0.3s ease;
+}
+.product-cart-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,0.05) !important;
+}
+
+/* КНОПКИ ТА КУПОНИ */
+.btn-orange {
+  background-color: var(--primary);
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  border: none;
+}
+.btn-orange:hover {
+  background-color: #e04f00;
+  color: white;
+}
+.form-select-sm {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 11px;
+}
+
+/* БОРДЕР ДЛЯ ПОРОЖНЬОГО СТАНУ */
+.border-dashed {
+  border-style: dashed !important;
+  border-width: 2px !important;
+}

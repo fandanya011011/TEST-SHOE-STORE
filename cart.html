@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кошик | ELITE KICKS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+  <header class="navbar-custom fixed-top bg-white border-bottom shadow-sm d-flex align-items-center">
+    <div class="container-max d-flex justify-content-between align-items-center px-4 px-md-5 w-100">
+      <div class="brand-logo text-primary cursor-pointer" onclick="window.location.href='index.html'">
+        ELITE KICKS
+      </div>
+      <nav class="nav-links d-none d-md-flex gap-4 align-items-center">
+        <a href="index.html" class="nav-link-btn">Головна</a>
+        <a href="catalog.html" class="nav-link-btn">Магазин</a>
+        <a href="#" class="nav-link-btn active-link">Кошик</a>
+      </nav>
+      <div class="d-flex align-items-center gap-3">
+        <button class="currency-btn d-flex align-items-center gap-1.5 px-3 py-1 rounded-pill" id="currencyToggle">
+          <i class="bi bi-globe text-primary"></i>
+          <span id="currencyText">UAH</span>
+        </button>
+        <button class="icon-btn p-2 rounded-circle position-relative">
+          <i class="bi bi-cart3 fs-4 text-primary"></i>
+          <span class="cart-badge position-absolute top-0 start-100 translate-middle badge rounded-circle bg-danger" id="cartCount">1</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content container-max px-4 px-md-5 py-5 text-start">
+    <h1 class="font-black text-uppercase text-dark mb-5 tracking-tight fs-2">
+      Your Cart / Кошик
+    </h1>
+
+    <div class="row g-4 align-items-start" id="cartGrid">
+      
+      <div class="col-lg-8 d-flex flex-column gap-4" id="cartItemsList">
+        
+        <div class="card product-cart-item p-4 border shadow-sm rounded-3 transition-300" data-id="item-1">
+          <div class="row g-3 align-items-center">
+            <div class="col-md-3 col-sm-4 text-center bg-light rounded-3 p-3">
+              <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=300&auto=format&fit=crop" class="img-fluid mix-blend-multiply" alt="Elite Speed Runner" style="max-height: 120px;">
+            </div>
+            
+            <div class="col-md-9 col-sm-8 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex justify-content-between align-items-start gap-2">
+                  <div>
+                    <h3 class="font-bold fs-5 text-dark m-0">Elite Speed Runner</h3>
+                    <p class="text-muted text-xs font-semibold mt-1 uppercase tracking-wider">Running / Performance</p>
+                  </div>
+                  <div class="text-end">
+                    <p class="font-black text-primary fs-5 m-0 item-total-price" data-base-price="3200" data-base-usd="80">3,200 ₴</p>
+                    <p class="text-muted text-xs m-0 mt-1 item-single-price d-none">3,200 ₴ кожна</p>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-4 mt-3">
+                  <div>
+                    <label class="text-muted font-bold text-uppercase text-xs tracking-wider d-block mb-1">Розмір</label>
+                    <select class="form-select form-select-sm font-bold text-xs bg-white border rounded">
+                      <option value="41">41.0</option>
+                      <option value="42" selected>42.0</option>
+                      <option value="43">43.0</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="text-muted font-bold text-uppercase text-xs tracking-wider d-block mb-1">Колір</label>
+                    <select class="form-select form-select-sm font-bold text-xs bg-white border rounded">
+                      <option value="Orange" selected>Orange</option>
+                      <option value="White">White</option>
+                      <option value="Deep Charcoal">Deep Charcoal</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center mt-4">
+                <div class="d-flex align-items-center border rounded-pill px-2 py-1 bg-white gap-3">
+                  <button class="btn btn-link text-dark p-0 d-flex align-items-center justify-content-center qty-minus" style="width: 24px; height: 24px; text-decoration: none;"><i class="bi bi-minus"></i></button>
+                  <span class="font-bold text-xs text-dark w-4 text-center select-none qty-count">1</span>
+                  <button class="btn btn-link text-dark p-0 d-flex align-items-center justify-content-center qty-plus" style="width: 24px; height: 24px; text-decoration: none;"><i class="bi bi-plus"></i></button>
+                </div>
+                <button class="btn btn-link text-danger text-uppercase font-black text-xs d-flex align-items-center gap-1 remove-item-btn" style="text-decoration: none;">
+                  <i class="bi bi-trash3"></i> <span>REMOVE</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-4 position-sticky" style="top: 100px;">
+        <div class="card p-4 border shadow-sm rounded-3 bg-white">
+          <h2 class="font-black text-uppercase text-dark fs-5 mb-4 pb-2 border-bottom">Order Summary / Підсумок</h2>
+          
+          <div class="d-flex flex-column gap-3 mb-4 text-sm font-medium">
+            <div class="d-flex justify-content-between">
+              <span class="text-muted">Проміжний підсумок</span>
+              <span class="font-bold text-dark font-mono" id="subtotalVal">3,200 ₴</span>
+            </div>
+            <div class="d-flex justify-content-between text-success font-bold d-none" id="discountBlock">
+              <span id="discountTitle">Знижка (10%)</span>
+              <span class="font-mono" id="discountVal">-320 ₴</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span class="text-muted">Доставка</span>
+              <span class="font-bold text-dark font-mono" id="shippingVal">250 ₴</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span class="text-muted">Податок (ПДВ 8%)</span>
+              <span class="font-bold text-dark font-mono" id="taxVal">256 ₴</span>
+            </div>
+            <div class="pt-3 border-top d-flex justify-content-between align-items-baseline font-black fs-5">
+              <span class="text-dark text-uppercase">Total / Усього</span>
+              <span class="text-primary font-bold font-mono fs-4" id="totalVal">3,706 ₴</span>
+            </div>
+          </div>
+
+          <button class="btn btn-orange w-100 py-3 text-uppercase font-black tracking-widest rounded-1 d-flex align-items-center justify-content-center gap-2" data-bs-toggle="modal" data-bs-target="#checkoutModal">
+            <i class="bi bi-lock-fill"></i> <span>PROCEED TO CHECKOUT</span>
+          </button>
+          
+          <div class="mt-4 pt-4 border-top">
+            <form id="promoForm" class="d-flex flex-column gap-2">
+              <label class="form-label text-muted font-bold text-uppercase tracking-wider text-xs m-0">Promo Code</label>
+              <div class="d-flex gap-2">
+                <input type="text" id="promoInput" placeholder="ENTER CODE" class="form-control text-xs text-uppercase font-bold">
+                <button type="submit" class="btn btn-dark text-uppercase font-bold text-xs px-4">Apply</button>
+              </div>
+            </form>
+            <p id="promoStatus" class="text-xs font-bold mt-2 d-none"></p>
+            <p class="text-muted text-xs mt-2 mb-0">💡 Промокод: <span class="font-bold text-primary text-decoration-underline cursor-pointer">ELITE10</span> (знижка 10%)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center py-5 border border-dashed rounded-3 bg-light d-none" id="emptyCartView">
+      <div class="p-4 rounded-circle bg-white d-inline-block shadow-sm mb-3 text-muted">
+        <i class="bi bi-bag-x-fill fs-1 opacity-50 text-secondary"></i>
+      </div>
+      <h3 class="font-bold text-dark fs-5">Ваш кошик порожній</h3>
+      <p class="text-muted text-xs max-w-xs mx-auto my-2">Додайте трендові релізи в магазині, щоб оформити доставку.</p>
+      <button class="btn btn-orange text-uppercase font-black tracking-widest px-4 py-2 mt-3" onclick="window.location.href='index.html'">Повернутись на головну</button>
+    </div>
+  </main>
+
+  <div class="modal fade" id="checkoutModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-4 border-0 rounded-3 shadow-lg">
+        <div class="modal-header border-0 p-0 mb-3">
+          <h5 class="modal-title font-black text-uppercase text-dark fs-5 d-flex align-items-center gap-2">
+            <i class="bi bi-credit-card-2-front text-primary"></i> Оформлення замовлення
+          </h5>
+          <button type="button" class="btn-close shadow-none" data-bs-transform="close" data-bs-dismiss="modal" aria-label="Close" id="closeModalBtn"></button>
+        </div>
+        
+        <div id="checkoutStep1">
+          <form id="checkoutForm">
+            <div class="mb-3">
+              <label class="form-label text-xs font-bold text-muted text-uppercase">ПІБ Одержувача *</label>
+              <input type="text" name="name" required class="form-control rounded-1 text-sm" placeholder="Іван Іванов">
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-xs font-bold text-muted text-uppercase">Email *</label>
+              <input type="email" name="email" required class="form-control rounded-1 text-sm" placeholder="your@email.com">
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-xs font-bold text-muted text-uppercase">Телефон *</label>
+              <input type="tel" name="phone" required class="form-control rounded-1 text-sm" placeholder="+380">
+            </div>
+            <div class="row g-2 mb-3">
+              <div class="col-6">
+                <label class="form-label text-xs font-bold text-muted text-uppercase">Місто *</label>
+                <input type="text" name="city" required class="form-control rounded-1 text-sm" placeholder="Київ">
+              </div>
+              <div class="col-6">
+                <label class="form-label text-xs font-bold text-muted text-uppercase">Адреса / Відділення *</label>
+                <input type="text" name="address" required class="form-control rounded-1 text-sm" placeholder="№1, вул. Хрещатик">
+              </div>
+            </div>
+            <div class="mb-4">
+              <label class="form-label text-xs font-bold text-muted text-uppercase">Спосіб оплати</label>
+              <select name="paymentMethod" class="form-select rounded-1 text-sm font-semibold">
+                <option value="cod">Накладений платіж (COD)</option>
+                <option value="card">Карткою на сайті</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-orange w-100 py-2.5 text-uppercase font-black tracking-wider">
+              Підтвердити замовлення (<span class="modal-total-price">3,706 ₴</span>)
+            </button>
+          </form>
+        </div>
+
+        <div id="checkoutStep2" class="text-center py-4 d-none">
+          <div class="success-icon-box bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 70px; height: 70px;">
+            <i class="bi bi-check-circle-fill fs-1"></i>
+          </div>
+          <h4 class="font-black text-uppercase text-dark mb-2">Замовлення прийнято!</h4>
+          <p class="text-muted text-xs px-3 mb-4">Дякуємо за покупку. Наш менеджер зв'яжеться з вами найближчим часом.</p>
+          
+          <div class="bg-light p-3 rounded-2 border text-start space-y-2 mb-4">
+            <div class="d-flex justify-content-between text-xs"><span class="text-muted">Номер замовлення:</span><span class="font-bold text-primary font-mono" id="resOrderNum">#EK-89472</span></div>
+            <div class="d-flex justify-content-between text-xs"><span class="text-muted">Клієнт:</span><span class="font-bold text-dark" id="resName">Іван</span></div>
+            <div class="d-flex justify-content-between text-xs border-top pt-2"><span class="font-bold text-dark">Сума до сплати:</span><span class="font-bold text-primary font-mono" id="resTotal">3,706 ₴</span></div>
+          </div>
+          <button class="btn btn-dark w-100 py-2 text-uppercase font-bold text-xs tracking-wider" onclick="location.reload();">Продовжити покупки</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>
